@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 16px;
+}
+
+@font-face {
+  font-family: "CR";
+  src: url("../fonts/Caveat-Regular.ttf") format("truetype");
+}
+.home {
+  position: relative;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(242, 92, 84, 0.5), rgba(242, 92, 84, 0.5)), url(../images/hero.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 0;
+}
+.home .circle-wrapper {
+  position: relative;
+  width: 415px;
+  height: 415px;
+  /* background-color: yellow; */
+}
+.home .circle-wrapper .big-circle {
+  position: absolute;
+  bottom: 0;
+  width: 357px;
+  height: 357px;
+  background-color: #FFD972;
+  border-radius: 50%;
+  box-shadow: 0px 8px 8px rgba(74, 73, 73, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.home .circle-wrapper .big-circle p {
+  width: 165px;
+  font-family: "CR";
+  text-align: center;
+  font-size: 13px;
+}
+.home .circle-wrapper .big-circle h1 {
+  text-align: center;
+  font-family: "CR";
+  padding: 30px;
+  font-size: 24px;
+}
+.home .circle-wrapper .small-circle {
+  position: absolute;
+  right: 0;
+  width: 167px;
+  height: 167px;
+  background-color: #FCBCB8;
+  border-radius: 50%;
+  box-shadow: 0px 8px 8px rgba(74, 73, 73, 0.3);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.home .circle-wrapper .small-circle p {
+  width: 110px;
+  font-family: "CR";
+  /* background-color: blue; */
+  text-align: center;
+  font-size: 10px;
+}
+
+@font-face {
+  font-family: "CR";
+  src: url("../fonts/Caveat-Regular.ttf") format("truetype");
+}
+header {
+  position: fixed;
+  z-index: 1;
+  padding: 0 20px;
+  height: 100px;
+  width: 100vw;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+header a {
+  text-decoration: none;
+}
+
+#brand {
+  height: 54px;
+  width: 167px;
+  margin-top: 38px;
+  margin-left: 50px;
+}
+
+nav {
+  max-width: 500px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ul a {
+  color: #000;
+  font-family: "CR";
+  font-size: 25px;
+}
+ul li {
+  padding: 5px;
+  margin-left: 10px;
+}
+ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  border-bottom: 2px solid #fff;
+}
+
+#login {
+  width: 158px;
+  height: 52px;
+  background-color: #FFD972;
+  border-radius: 26px;
+  box-shadow: 0px 10px 3px rgba(74, 73, 73, 0.3);
+  color: #000;
+  border: none;
+  margin: 0 auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#login a {
+  color: #000;
+  font-family: "CR";
+  font-size: 25px;
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  cursor: pointer;
+  display: none;
+}
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+  background-color: #000;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2 {
+  opacity: 0;
+}
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  height: calc(100vh - 50px);
+  width: 100%;
+  z-index: 1;
+}
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  header nav {
+    display: none;
+  }
+  #hamburger-icon {
+    display: block;
+  }
+}
+@font-face {
+  font-family: "CR";
+  src: url("../fonts/Caveat-Regular.ttf") format("truetype");
+}
+.login-page {
+  height: 100%;
+  height: 100vh;
+  background-color: #FFD972;
+}
+.login-page .inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.login-page .inputs .login {
+  margin: 20px;
+}
+.login-page .inputs .login #login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-evenly;
+  margin-top: 283px;
+  margin-bottom: 226px;
+  font-family: "CR";
+}
+.login-page .inputs .login #login-form h1 {
+  margin-bottom: 62px;
+}
+.login-page .inputs .login #login-form input {
+  width: 233px;
+  height: 25px;
+  border: none;
+  background-color: #FFD972;
+  border-bottom: 2px solid #000;
+  margin-bottom: 56px;
+}
+.login-page .inputs .login #login-form input::placeholder {
+  color: black;
+  font-family: "CR";
+}
+.login-page .inputs .login #login-form button {
+  width: 209px;
+  height: 52px;
+  background-color: #FFD972;
+  border-radius: 26px;
+  box-shadow: 0px 10px 3px rgba(74, 73, 73, 0.3);
+  color: #000;
+  border: none;
+  margin: 0 auto;
+  cursor: pointer;
+  font-family: "CR";
+  font-size: 25px;
+}
+.login-page .inputs .sign-up {
+  margin: 20px;
+}
+.login-page .inputs .sign-up #sign-up-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-evenly;
+  margin-top: 175px;
+  margin-bottom: 175px;
+  font-family: "CR";
+}
+.login-page .inputs .sign-up #sign-up-form h1 {
+  margin-bottom: 62px;
+}
+.login-page .inputs .sign-up #sign-up-form input {
+  width: 233px;
+  height: 25px;
+  border: none;
+  background-color: #FFD972;
+  border-bottom: 2px solid #000;
+  margin-bottom: 56px;
+}
+.login-page .inputs .sign-up #sign-up-form input::placeholder {
+  color: black;
+  font-family: "CR";
+}
+.login-page .inputs .sign-up #sign-up-form button {
+  width: 209px;
+  height: 52px;
+  background-color: #FFD972;
+  border-radius: 26px;
+  box-shadow: 0px 10px 3px rgba(74, 73, 73, 0.3);
+  color: #000;
+  border: none;
+  margin: 0 auto;
+  cursor: pointer;
+  font-family: "CR";
+  font-size: 25px;
+}
+
+@font-face {
+  font-family: "CR";
+  src: url("../fonts/Caveat-Regular.ttf") format("truetype");
+}
+body {
+  position: relative;
+}
+
+footer {
+  position: fixed;
+  z-index: 1;
+  padding: 0 20px;
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+  flex-wrap: wrap;
+}
+footer p {
+  font-family: "CR";
+  font-size: 15px;
+}
+footer .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  max-width: 700px;
+  width: 100%;
+}
+footer .logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 80px;
+  width: 100%;
+}
+footer .logos .instagram {
+  height: 19px;
+  width: 19px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/instagram.svg);
+}
+footer .logos .facebook {
+  height: 19px;
+  width: 19px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/facebook.svg);
+}

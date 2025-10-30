@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "CR";
+  src: url('../fonts/Caveat-Regular.ttf') format('truetype');
+}
+
+.home {
+  position: relative;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   // background-image: url(../images/hero.jpg);
+    background-image: linear-gradient(rgba(242, 92, 84, .5), rgba(242, 92, 84, .5)), url(../images/hero.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 0;
+  
+    .circle-wrapper {
+      position: relative;
+      width: 415px;
+      height: 415px;
+      /* background-color: yellow; */
+  
+      .big-circle {
+        position: absolute;
+        bottom: 0;
+        width: 357px;
+        height: 357px;
+        background-color: #FFD972;
+        border-radius: 50%;
+        box-shadow: 0px 8px 8px rgba(74, 73, 73, 0.3);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        p {
+          width: 165px;
+          font-family: "CR";
+          text-align: center;
+          font-size: 13px;
+        }
+  
+        h1 {
+          text-align: center;
+          font-family: "CR";
+          padding: 30px;
+          font-size: 24px;
+        }
+      }
+  
+      .small-circle {
+        position: absolute;
+        right: 0;
+        width: 167px;
+        height: 167px;
+        background-color: #FCBCB8;
+        border-radius: 50%;
+        box-shadow: 0px 8px 8px rgba(74, 73, 73, 0.3);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        p {
+          width: 110px;
+          font-family: "CR";
+          /* background-color: blue; */
+          text-align: center;
+          font-size: 10px;
+        }
+      }
+    }
+  }

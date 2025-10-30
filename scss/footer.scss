@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "CR";
+    src: url('../fonts/Caveat-Regular.ttf') format('truetype');
+  }
+
+  body {
+    position: relative;
+  }
+
+footer {
+  position: fixed;
+  z-index: 1;
+    padding: 0 20px;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    flex-wrap: wrap;
+  
+  p {
+    font-family: "CR";
+    font-size: 15px;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 80px;
+    width: 100%;
+    
+    .instagram {
+      height: 19px;
+      width: 19px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../images/instagram.svg);
+    }
+
+    .facebook {
+      height: 19px;
+      width: 19px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../images/facebook.svg);
+    }
+  }
+}
