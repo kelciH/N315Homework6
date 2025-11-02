@@ -83,10 +83,6 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 10px;
 }
 
-@font-face {
-  font-family: "CR";
-  src: url("../fonts/Caveat-Regular.ttf") format("truetype");
-}
 header {
   position: fixed;
   z-index: 1;
@@ -193,7 +189,7 @@ ul li:hover {
 .mobile-menu {
   display: none;
   position: absolute;
-  top: 50px;
+  top: 100px;
   left: 0px;
   height: calc(100vh - 50px);
   width: 100%;
@@ -210,10 +206,6 @@ ul li:hover {
   #hamburger-icon {
     display: block;
   }
-}
-@font-face {
-  font-family: "CR";
-  src: url("../fonts/Caveat-Regular.ttf") format("truetype");
 }
 .login-page {
   height: 100%;
@@ -307,10 +299,6 @@ ul li:hover {
   font-size: 25px;
 }
 
-@font-face {
-  font-family: "CR";
-  src: url("../fonts/Caveat-Regular.ttf") format("truetype");
-}
 body {
   position: relative;
 }
